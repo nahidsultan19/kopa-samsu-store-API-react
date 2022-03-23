@@ -14,8 +14,10 @@ const Shop = () => {
     }, [])
 
 
-    const handleAddToCart = (selectedProduct) => {
-        console.log('btn clicked..', selectedProduct)
+    const handleAddToCart = (product) => {
+        console.log('btn clicked..', product)
+        const newCart = [...cart, product]
+        setCart(newCart)
     }
 
     return (
