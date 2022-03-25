@@ -1,13 +1,12 @@
-import logo from './logo.svg';
 import './App.css';
-import Header from './Components/Header/Header';
-import Shop from './Components/Shop/Shop';
+import Navbar from './Components/Navbar/Navbar';
+import Products from './Components/Products/Products';
 
 function App() {
   return (
     <div>
-      <Header></Header>
-      <Shop></Shop>
+      <Navbar></Navbar>
+      <Products></Products>
     </div>
   );
 }

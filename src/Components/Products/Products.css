@@ -1,0 +1,15 @@
+.products{
+    display: flex;
+    justify-content: space-between;
+}
+.guns{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 20px;
+    margin: 20px 0;
+}
+.cart-container{
+    background-color: burlywood;
+    padding: 20px;
+    position: sticky;
+}

@@ -1,20 +1,25 @@
 import React from 'react';
-import './Product.css'
+import './Product.css';
+import { BsFillCartFill } from 'react-icons/bs';
 
 const Product = (props) => {
-    const { name, img, price, seller, ratings } = props.product;
+    const { img, name, bullet, capacity, action } = props.product
+    const { addToCart } = props;
     return (
-        <div className='product'>
-            <img src={img} alt="" />
-            <div className="product-info">
-                <h4 className='product-name'>{name}</h4>
-                <p>Price: {price}</p>
-                <p><small>Seller: {seller}</small></p>
-                <p><small>Rating:{ratings}</small></p>
+        <div className='card'>
+            <div className="img-container">
+                <img src={img} alt="" />
             </div>
-            <button onClick={() => props.handleAddToCart(props.product)} className='btn-cart'>
+            <div className="gun-info">
+                <h3>{name}</h3>
+                <p>Bullet: {bullet}</p>
+                <small>Capacity: {capacity}</small>
+                <p>Action: {action}</p>
+            </div>
+            <div onClick={() => addToCart(props.product)} className="cart-btn">
                 <p className='btn-text'>Add to Cart</p>
-            </button>
+                <BsFillCartFill></BsFillCartFill>
+            </div>
         </div>
     );
 };
